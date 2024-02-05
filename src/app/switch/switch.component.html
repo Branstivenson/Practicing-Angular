@@ -1,0 +1,13 @@
+<h2>Mostrar el dia de la semana teniendo en cuenta el numero ingresado del 1 - 7</h2>
+<input type="text" class="form-control" placeholder="Ingresa un número de día" #number_day>
+<button class="btn btn-primary my-3" (click)="dia=number_day.value">Hecho</button>
+<div [ngSwitch]="dia" *ngIf="dia">
+    <span *ngSwitchCase="'1'">Lunes</span>
+    <span *ngSwitchCase="'2'">Martes</span>
+    <span *ngSwitchCase="'3'">Miercoles</span>
+    <span *ngSwitchCase="'4'">Thuesday</span>
+    <span *ngSwitchCase="'5'">Friday</span>
+    <span *ngSwitchCase="'6'">Saturday</span>
+    <span *ngSwitchCase="'7'">Sunday</span>
+    <span *ngSwitchDefault>Valor no valido</span>
+</div>
